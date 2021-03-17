@@ -16,11 +16,11 @@ cv2.namedWindow('camera', cv2.WINDOW_AUTOSIZE)
 while (1):
     ret, frame = cap.read()
 
-    gs_frame = cv2.GaussianBlur(frame, (5, 5), 0)                     # 高斯模糊
-    hsv = cv2.cvtColor(gs_frame, cv2.COLOR_BGR2HSV)                 # 转化成HSV图像
+    gs_frame = cv2.GaussianBlur(frame, (5, 5), 0)
+    hsv = cv2.cvtColor(gs_frame, cv2.COLOR_BGR2HSV)
     kernel = np.ones((3, 3), np.uint8)
-    erode_hsv = cv2.erode(hsv,kernel, iterations=1)                   # 腐蚀 粗的变细
-    erode_hsv = cv2.erode(hsv,kernel, iterations=1)                   # 腐蚀 粗的变细
+    erode_hsv = cv2.erode(hsv,kernel, iterations=1)
+    erode_hsv = cv2.erode(hsv,kernel, iterations=1)
     
     
     
